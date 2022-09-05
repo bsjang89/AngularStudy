@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TitlebarComponent } from './titlebar/titlebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainviewComponent } from './mainview/mainview.component';   
 
 import { DefaultModule } from './default/default.module';
 import { ImagesComponent } from './images/images.component'; 
@@ -14,7 +13,6 @@ import { ImagesComponent } from './images/images.component';
   declarations: [
     AppComponent,
     TitlebarComponent, 
-    MainviewComponent,
     ImagesComponent, 
   ],
   imports: [
