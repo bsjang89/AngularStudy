@@ -1,0 +1,71 @@
+ <div class="outside">
+   <div class="inner">
+     <div class="title">Image Classification Labeling</div>
+     <div class="btn image-upload" id="image-upload">
+       <label class="loadfile" for="chooseFile">Upload Image Files</label>
+       <input type="file" id="chooseFile" name="chooseFile" multiple accept="image/*" (change)="loadfiles($event)">
+     </div>
+   </div>
+
+   <section class="classinfo">
+     <input type="text" class="txtInput" id="txtInput" placeholder="Class name" [(ngModel)]="txclassName">
+     <div class="classheader">
+       <button type="button" class="btn addClass" (click)="onAddClass($event)">Add</button>
+       <button type="button" class="btn delClass" (click)="onDelClass($event)">Remove</button>
+     </div>
+ 
+
+    
+     <div id="classes" class="classes" #classesContent>
+      </div>
+      <!-- <input type="radio" class="testinput" name="classes" id="test" value="1">
+      <label for="test">1</label> -->
+       <!-- <mat-radio-group aria-label="classes" #classesContent></mat-radio-group> -->
+       <!-- <mat-radio-group aria-label="classes" [innerHtml]="classesContent"></mat-radio-group> --> 
+
+     <div class="confirm">
+       <div type="button" class="btn skip" (click)="onSkip($event)">Skip</div>
+       <div type="button" class="btn submit" (click)="onSubmit($event)">Submit</div>
+     </div>
+   </section>
+
+   <section class="imageSection">
+     <div class="inner">
+       <div class="imageTitle">
+         <p id=fileName></p>
+         <div class="image-control">
+           <button class="zoom zoom-plus material-icons" id="zoom-plus" (click)="onZoomIn($event)">zoom_in</button>
+           <button class="zoom zoom-minus material-icons" id="zoom-minus" (click)="onZoomOut($event)">zoom_out</button>
+           <button class="zoom zoom-fit material-icons" id="zoom-fit" (click)="onZoomFit($event)">fit_screen</button>
+         </div>
+       </div>
+       <div class=image-viewer>
+         <div class="image-show" id="image-show" 
+         (mouseout)="onMouseLeave($event)"
+         (mousedown)="onMouseDown($event)"
+         (mouseup)="onMouseUp($event)"
+         (mousemove)="onMouseover($event)"
+         (wheel)="onWheel($event)">
+          <!-- <svg [(ngModel)]="imgSrc" ngDefaultControl> 
+          </svg> -->
+         </div>
+       </div>
+       <div class="search">
+         <button class="btn btn--small" id="btn-prev" (click)="onPrevImage()">Prev</button>
+         <button class="btn btn--small" id="btn-next" (click)="onNextImage()">Next</button>
+       </div>
+     </div>
+   </section>
+
+   <section class="reviewSection">
+     <div class="inner">
+       <div class="labeldinfo"></div>
+       <div class="labeledClass">
+         <p id=labeledcount></p>
+       </div>
+       <div class="export" (click)="onExport()">
+         <div type="button" class="btn exportBtn">Export</div>
+       </div>
+     </div>
+   </section>
+ </div>

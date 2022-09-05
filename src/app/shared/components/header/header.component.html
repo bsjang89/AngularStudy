@@ -1,0 +1,48 @@
+<!-- <p>header works!</p> -->
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      <button mat-icon-button (click)="toggleSideBar()">
+          <mat-icon>menu</mat-icon>
+      </button>
+
+      <span> Angular Study </span>
+
+      <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+          <ul fxLayout="row" fxLayoutGap="20px">
+              <li>
+                  <button mat-icon-button [matMenuTriggerFor]="settingMenu">
+                      <mat-icon>settings</mat-icon>
+                  </button>
+                  <mat-menu #settingMenu="matMenu">
+                      <button mat-menu-item>
+                          <mat-icon>language</mat-icon>
+                          Language
+                      </button>
+                      <button mat-menu-item>
+                        <mat-icon>save_alt_icon</mat-icon> 
+                        Image download
+                      </button> 
+                  </mat-menu>
+              </li>
+              <li>
+                  <button mat-icon-button>
+                      <mat-icon>help_outline</mat-icon>
+                  </button>
+              </li>
+              <li>
+                  <button mat-button [matMenuTriggerFor]="menu">
+                      <mat-icon>person_outline</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                      <button mat-menu-item>
+                          <mat-icon>exit_to_app</mat-icon>
+                          Sign out
+                      </button>
+                  </mat-menu>
+
+              </li>
+          </ul>
+      </div>
+  </mat-toolbar-row>
+</mat-toolbar>

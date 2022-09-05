@@ -1,0 +1,61 @@
+#image-show{
+  display: flex;
+  flex-wrap: wrap;
+  //align-content: flex-start;
+}
+
+.image-upload {
+  width: 200px;
+  height: 40px;  
+  top: 5px;
+  right: 5px;  
+  position: absolute; 
+}
+.image-upload .loadfile {
+  width: 100%;
+  height: 36px;  
+  position: absolute;
+  display: block;
+  line-height: 36px;
+  margin: -10px;  
+}
+#chooseFile {
+  visibility: hidden;
+} 
+
+.btn {
+  width: auto;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  color: #444;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .2s;
+  background-color: #999;
+  align-items: center;
+} 
+.btn:hover {  
+  background-color: #2B3648;
+  border-color: #1976D2;
+  color: #bbb; 
+}
+.button.btn--small {
+  width: 150px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+}
+ 
